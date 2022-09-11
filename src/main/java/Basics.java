@@ -43,7 +43,7 @@ public class Basics {
         /* TODO (Task 1): Write a line of code below that prints the string
          *                Hello World!
          */
-
+        System.out.println("Hello World!");
 
 
         /* 4. In Python, we could declare variables using a simple assignment
@@ -62,6 +62,7 @@ public class Basics {
          * TODO (Task 2): Create a variable named my_variable and assign it the
          *                value 100.
          */
+        int my_variable = 100;
 
 
 
@@ -99,8 +100,9 @@ public class Basics {
          * Current count: 1
          * Current count: 0
          */
-
-
+        for (int i = 10; i>-1; i--) {
+            System.out.println("Current count: " + i);
+        }
     }
 
     /**
@@ -132,6 +134,7 @@ public class Basics {
      *                   spaces.
      * @return           The first letter of every word in to_split
      */
+
     public static String split(String to_split) {
         /* TODO (Task 4): Complete this method body.
          *                The String methods .split and .charAt may be helpful,
@@ -140,7 +143,16 @@ public class Basics {
          *                separated by spaces, so no loops are required, though
          *                you may use them if you wish.
          */
+        String[] a = to_split.split(" ");
         StringBuilder ret = new StringBuilder();
+        ret.append(a[0].charAt(0));
+        ret.append(a[1].charAt(0));
+        ret.append(a[2].charAt(0));
+        ret.append(a[3].charAt(0));
+        ret.append(a[4].charAt(0));
+        ret.append(a[5].charAt(0));
+        ret.append(a[6].charAt(0));
+
 
         // Fill in the rest of the body here
 
@@ -163,6 +175,25 @@ public class Basics {
      */
     public static int oddSum(int[] arr) {
         int current_sum = 0;
+        int a = arr.length;
+        if (a == 0 || a == 1){
+            return 0;
+        }
+        else {
+            int index = 0;
+            for (int i: arr){
+                if (index % 2 == 1){
+                    current_sum += i;
+                    index ++;
+                }
+                else{
+                    index ++;
+                }
+            }
+
+
+
+        }
 
         /* TODO (Task 5): Complete this method body using a for-loop.
          *                You can find the length of an array by using the
